@@ -25,10 +25,16 @@ class EditAssignment : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
+        clearErrors()
+
         binding.btnPostAssignment.setOnClickListener {
-            val intent = Intent(this, ShopsActivity::class.java)
-            startActivity(intent)
+            if (validateEditAssignment()) {
+
+                val intent = Intent(this, ShopsActivity::class.java)
+                startActivity(intent)
+            }
         }
+
         binding.ivcancel.setOnClickListener {
             val intent = Intent(this, SubjectChoosenAssignments::class.java)
             startActivity(intent)
@@ -60,4 +66,40 @@ class EditAssignment : AppCompatActivity() {
 
         datePickerDialog.show()
     }
+
+    fun validateEditAssignment(): Boolean {
+        val topic = binding.ettopic.text.toString()
+        val message = binding.ettypemessage.text.toString()
+        val resources = binding.etresources.text.toString()
+        val categories = binding.etcategories.text.toString()
+
+        var error = false
+        if (topic.isBlank()) {
+            binding.tiltopic.error = "Topic is required"
+            error = true
+        }
+        if (message.isBlank()) {
+            binding.tiltypemessage.error = "Message is required"
+            error = true
+        }
+        if (resources.isBlank()) {
+            binding.tilresources.error = "Resources is required"
+            error = true
+        }
+        if (categories.isBlank()) {
+            binding.tilcategories.error = "Categories is required"
+            error = true
+        }
+
+        return !error
+    }
+
+    fun clearErrors() {
+        binding.tilcategories.error = null
+        binding.tilresources.error = null
+        binding.tiltopic.error = null
+        binding.tiltypemessage.error = null
+    }
 }
+
+
