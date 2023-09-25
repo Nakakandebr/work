@@ -43,7 +43,7 @@
         android:id="@+id/tv30th"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="44dp"
         android:text="30th August"
         app:layout_constraintStart_toEndOf="@+id/tvDuedate"
@@ -132,29 +132,7 @@
         app:srcCompat="@drawable/baseline_arrow_back_ios_24"
         app:tint="@color/blue" />
 
-    <Button
-        android:id="@+id/btnPanga"
-        android:layout_width="127dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="76dp"
-        android:backgroundTint="@color/blue"
-        android:text="Panga"
-        app:cornerRadius="7dp"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/cardView3" />
 
-    <Button
-        android:id="@+id/btnGumboots"
-        android:layout_width="120dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="72dp"
-        android:text="Gamboots"
-        android:backgroundTint="@color/blue"
-        app:cornerRadius="7dp"
-        app:layout_constraintStart_toEndOf="@+id/btnPanga"
-        app:layout_constraintTop_toBottomOf="@+id/cardView3" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -164,8 +142,6 @@
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.8"
-        app:layout_constraintStart_toEndOf="@+id/btnGumboots"
-        app:layout_constraintTop_toTopOf="@+id/btnGumboots"
         app:srcCompat="@drawable/baseline_arrow_forward_ios_24" />
 
 
@@ -173,24 +149,23 @@
         android:id="@+id/tvResourcesNeeded"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="28dp"
         android:text="Resources needed"
-        app:layout_constraintBottom_toTopOf="@+id/btnPanga"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView3"
-        app:layout_constraintVertical_bias="0.416" />
+        app:layout_constraintTop_toBottomOf="@+id/cardView3" />
+
+
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="65dp"
         android:layout_height="29dp"
-        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.525"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnGumboots"
         app:srcCompat="@drawable/baseline_more_horiz_24"
-        app:tint="@color/blue" />
+        app:tint="@color/blue"
+        tools:layout_editor_absoluteY="519dp" />
 
     <ImageView
         android:id="@+id/ivarrow2"
@@ -200,8 +175,17 @@
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/baseline_keyboard_arrow_left_24"
-        app:tint="@color/blue" />
+        app:srcCompat="@drawable/back"
+         />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvresources"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        tools:listitem="@layout/item_button"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -111,43 +111,6 @@
         app:layout_constraintTop_toBottomOf="@+id/tvResourcesNeeded"
         app:srcCompat="@drawable/baseline_arrow_back_ios_24" />
 
-    <Button
-        android:id="@+id/btnPanga"
-        android:layout_width="127dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="76dp"
-        android:text="Panga"
-        android:backgroundTint="@color/blue"
-
-        app:cornerRadius="7dp"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/cardView3" />
-
-    <Button
-        android:id="@+id/btnGumboots"
-        android:layout_width="120dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="76dp"
-        android:text="Gamboots"
-        android:backgroundTint="@color/blue"
-        app:cornerRadius="7dp"
-        app:layout_constraintStart_toEndOf="@+id/btnPanga"
-        app:layout_constraintTop_toBottomOf="@+id/cardView3" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
-        app:layout_constraintStart_toEndOf="@+id/btnGumboots"
-        app:layout_constraintTop_toTopOf="@+id/btnGumboots"
-        app:srcCompat="@drawable/baseline_arrow_forward_ios_24" />
-
     <TextView
         android:id="@+id/tvAddComment"
         android:layout_width="wrap_content"
@@ -160,10 +123,10 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilSend"
-        android:layout_width="368dp"
+        android:layout_width="328dp"
         android:layout_height="127dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvAddComment">
 
@@ -181,10 +144,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="Resources needed"
-        app:layout_constraintBottom_toTopOf="@+id/btnPanga"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView3"
-        app:layout_constraintVertical_bias="0.416" />
+        app:layout_constraintTop_toBottomOf="@+id/cardView3" />
 
     <ImageView
         android:id="@+id/ivarr1"
@@ -196,7 +157,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.339"
-        app:srcCompat="@drawable/baseline_keyboard_arrow_left_24" />
+        app:srcCompat="@drawable/back" />
 
     <ImageView
         android:id="@+id/imageView8"
@@ -219,13 +180,24 @@
         app:srcCompat="@drawable/baseline_edit_24" />
 
     <ImageView
-        android:id="@+id/imageView10"
+        android:id="@+id/ivsend"
         android:layout_width="wrap_content"
-        android:layout_height="5dp"
-        android:layout_weight="1"
-        app:srcCompat="@drawable/baseline_send_24"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="623dp" />
+        android:layout_height="30dp"
+        android:layout_marginTop="230dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3"
+        app:srcCompat="@drawable/send" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvresources"
+        android:layout_width="384dp"
+        android:layout_height="94dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvResourcesNeeded"
+        tools:listitem="@layout/resourcelist" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

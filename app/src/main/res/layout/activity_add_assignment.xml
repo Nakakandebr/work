@@ -50,18 +50,16 @@
             app:layout_constraintTop_toTopOf="@+id/tvTopicName"
             app:tint="@color/blue" />
 
+
         <TextView
             android:id="@+id/tvDueDate"
-            android:layout_width="306dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="9dp"
+            android:layout_width="140dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="20dp"
             android:text="@string/_30th_august"
             android:textSize="15sp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imgCalendar"
-            app:layout_constraintTop_toTopOf="@+id/imgCalendar"
-            app:layout_constraintVertical_bias="0.0" />
-
+            app:layout_constraintTop_toTopOf="@+id/imgCalendar" />
 
         <TextView
             android:id="@+id/tvAssignmentDetails"
